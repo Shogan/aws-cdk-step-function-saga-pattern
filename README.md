@@ -12,6 +12,8 @@ There are 3 x main lambda functions, one for each of the above, and a paired 'ro
 
 In the event of a failure at a certain point in the transaction, the rollback step for that function will run, followed by the rollback functions for any other steps in the transaction that had already run.
 
+See: [Blog post discussing Saga Pattern and this aws-cdk app here](https://www.shogan.co.uk/aws/saga-pattern-with-aws-cdk-lambda-and-step-functions/).
+
 ## Building locally
 
 There is no top-level npm script to build all the lib/lambda function modules, so remember to `tsc` and `npm install` for each of those if you wish work with the functions locally. You'll need to do this in the lib/lambda/common directory first, as this is a dependency of each lambda function.
